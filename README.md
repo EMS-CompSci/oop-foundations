@@ -2,7 +2,7 @@
 # Concepts
 
 How **inheritance** builds variants of classes by establishing 'is-a' relationships.<br>
-How **association** builds dependencies between classes by establishing 'is-a' relationships.<br>
+How **association** builds dependencies between classes by establishing 'has-a' relationships.<br>
 Purpose of **access modifier** **protected**.<br>
 How **virtual methods** allow for **polymorphism**.<br>
 
