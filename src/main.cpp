@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <cmath>
+#include <vector>
 
 //Class declaration
 class Point {
@@ -11,13 +12,23 @@ private:
     double y;
 
 public:
-    //constructor
+    //constructors
+    //------------
+
+    Point(){
+        x = 0;
+        y = 0;
+    }
+
     Point(double initialX, double initialY) {
         x = initialX;
         y = initialY;
     }
 
-    //getter methods
+    //Methods
+    //-------------
+
+    //getters and setters
     double getX() const {
         return x;
     }
@@ -34,16 +45,25 @@ public:
         //write the correct code here
     }
 
+    //enquiry methods
+    //------------------
+    double distanceTo(Point anotherPoint){
+        //write the correct code here
+        return 0.0;
+    }
+
+    //display method
+    //--------------------
+
     std::string toString() {
         return "(" + std::to_string(x) + ", "
                    + std::to_string(y) + ")";
     }
 
-    double distanceTo(Point anotherPoint){
-        //write the correct code here
-        return 0.0;
-    }
-}; //end of class declaration 
+
+}; //end of class declaration POINT
+
+//Function inquiring about two points
 
 Point midPoint(Point point1, Point point2) {
     Point midPoint(0.0,0.0);
@@ -53,10 +73,27 @@ Point midPoint(Point point1, Point point2) {
 }
 
 
+//Class declaration
+//-----------------
+
+class Polygon {
+    private:
+    std::vector<Point> points;
+
+    public:
+    Polygon(int n){
+        for (int i = 0; i < n; i++) {
+              points.push_back(Point());
+        }
+    }
+};
+
 int main() {
 
     Point p1(0.0, 0.0);
     Point p2(3.0, 4.0);
+
+    Polygon polygon(4);
 
     double distance = 0.0;
 
