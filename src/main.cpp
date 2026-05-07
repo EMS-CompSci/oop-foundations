@@ -6,14 +6,14 @@
 class Point {
 
 //attributes
-public:
+private:
     double x;
     double y;
 
 public:
     //constructor
     Point(double initialX, double initialY) {
-        x = initialX; //in python self.x
+        x = initialX;
         y = initialY;
     }
 
@@ -27,7 +27,7 @@ public:
     }
 
     void setX(double newX){
-        //write the correct code here
+        x = newX;
     }
 
     void setY(double newY){
@@ -65,7 +65,6 @@ int main() {
     std::cout << "p1 = " << p1.toString() << std::endl;
     std::cout << "p2 = " << p2.toString() << std::endl;
 
-    std::cout << "p2.x = " << p2.x<< std::endl;
     std::cout << "p2.y = " << p2.getY() << std::endl;
     std::cout << "distance = " << distance << std::endl;
     
