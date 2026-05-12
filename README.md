@@ -18,8 +18,8 @@ You learn through practice with the code in this file.<br>
 
 | Term | Definition |
 |------|---------|
-| Default Constructot | A constructor without parameters |
-| Inheritance | The feature where a **child class** is **derived** from a **parent class**, such that it encapsulates everything the parent class encapsulates with the option of encapsuate further data or methods.|
+| Default Constructor | A constructor without parameters |
+| Inheritance | The feature where a **child class** is **derived** from a **parent class**, such that it encapsulates everything the parent class encapsulates with the option of encapsuating further data or methods.|
 | Association | A dependency relationship between two classes, such that one class is contained within aother. |
 | Composition | A type of association where the containing class is fully 'owned' by the containing class. |
 | Aggregation | A type of association where the containing class is not fully 'owned' by the containing class. |

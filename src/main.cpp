@@ -6,12 +6,14 @@
 //Class declaration
 class Point {
 
-//attributes
-private:
+    
+    private:
+    //attributes
+
     double x;
     double y;
 
-public:
+    public:
     //constructors
     //------------
 
@@ -26,6 +28,7 @@ public:
     }
 
     //Methods
+    //(note that these are also public)
     //-------------
 
     //getters and setters
@@ -77,23 +80,56 @@ Point midPoint(Point point1, Point point2) {
 //-----------------
 
 class Polygon {
-    private:
+    protected:
     std::vector<Point> points;
 
     public:
-    Polygon(int n){
-        for (int i = 0; i < n; i++) {
-              points.push_back(Point());
+
+    //constructor(s)
+    //---
+    Polygon(int n) {
+         for (int i=0; i<n; i++) {
+            points.push_back(Point(0,0));
+         }
+    }
+
+    //enquiry methods
+    //------------------
+    virtual double area() = 0;
+};
+
+class Rectangle : public Polygon {
+    public:
+
+    //constructors
+    //---
+    Rectangle(std::vector<Point> initialPoints) : Polygon(4) {
+        for (int i=0; i<4; i++) {
+            points[i] = initialPoints[i];
         }
     }
+
+    //enquiry methods
+    //------------------
+    double area() {
+        //write correct code here
+        return 0;
+    }
+
+
 };
+
+
 
 int main() {
 
     Point p1(0.0, 0.0);
     Point p2(3.0, 4.0);
 
-    Polygon polygon(4);
+    std::vector<Point> somePoints = { Point(0,0), Point(2,3), p1, p2};
+
+
+    Rectangle rect(somePoints);
 
     double distance = 0.0;
 
